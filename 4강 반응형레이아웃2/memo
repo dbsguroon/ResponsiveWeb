@@ -1,0 +1,26 @@
+inline-block일대 4px의 공백 해결방법
+
+원인
+
+:  inline, inline-block 같은 inline 요소들은 font-size, font-family 등 폰트에 영향을 받습니다.
+ 영향을 받는 이유는 아래 보이는 '공백' 때문입니다.
+
+
+ 해결방법
+
+ 1. 공백 제거 (단점:코드보기 힘들어짐)
+ 2. 태그를 다음 줄에서 닫기
+    <span class="child-inline">1</span
+    ><span class="child-inline">2</span
+    ><span class="child-inline">3</span>
+ 3. .parent-inline { font-size: 0px; }
+    .child-inline { font-size: 1rem;}
+    즉 부모에 요소에 font-size를 0을주고 자식요소에 HTML 요소 기준임 16px을 주는것임
+
+ em 단위는 상위 요소 크기의 몇 배인지로 크기를 정합니다 (부모요소의 폰트사이즈크기의 몇배인지)
+ rem 단위는 
+
+ rem - html 요소 기준 (보통 html 기본 font-size:16px임)
+
+ 4. margin 속성 조정
+ .child-inline { margin-right: -4px; }

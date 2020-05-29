@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive layout2</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        #wrap {
+            width: 100%;
+        }
+
+        header {
+            width: 100%;
+            height: 150px;
+            background: #81c784;
+        }
+
+        aside {
+            width: 30%;
+            height: 700px;
+            float: left;
+            background: #66bb6a;
+        }
+
+        section {
+            width: 40%;
+            height: 700px;
+            float: left;
+            background: #4caf50;
+        }
+
+        article {
+            width: 30%;
+            height: 700px;
+            float: left;
+            background: #43a047;
+        }
+
+        footer {
+            width: 100%;
+            height: 150px;
+            clear: both;
+            background: #388e3c;
+        }
+
+        @media only all and (max-width: 1200px) {
+            aside {
+                width: 40%;
+            }
+
+            section {
+                width: 60%;
+            }
+
+            article {
+                width: 100%;
+                height: 300px;
+            }
+        }
+
+        @media only all and (max-width: 768px) {
+            aside {
+                width: 100%;
+                height: 300px;
+            }
+
+            section {
+                width: 100%;
+                height: 300px;
+            }
+
+            article {
+                width: 100%;
+                height: 300px;
+            }
+        }
+
+        @media only all and (max-width: 480px) {
+            header {
+                height: 300px;
+            }
+
+            aside {
+                height: 200px;
+            }
+
+            section {
+                height: 200px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="wrap">
+        <header></header>
+        <aside></aside>
+        <section></section>
+        <article></article>
+        <footer></footer>
+    </div>
+</body>
+
+</html>
