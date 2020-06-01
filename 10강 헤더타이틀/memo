@@ -1,0 +1,61 @@
+text-algin:center;
+
+1. display:block에 줄수있다.
+2. block요소안에 있는 인라인 요소들을 정렬한다.
+
+<div style="text-align:center;">
+    <h1>안녕</h1>
+    <span>반가워</span>
+</div>
+
+여기서 주의할점은 span태그는 인라인 요소니까 가운데 정렬을 하지만
+h1 태그는 정렬하지 않는다. 하지만 h1 태그안에 있는 텍스트나 이미지들은 가운데 정렬이된다.
+
+-------------------------------------------------------------------------------------------
+
+inline요소들은 padding 위아래 패딩값이 안먹기때문에 
+display를 block 요소나 inline-block 요소로 바꾸어 주어야 한다.
+block 으로 바꾸면 수직 으로 정렬되고
+inline-block 으로 바꾸면 수평으로 정렬된다
+
+참고로 margin을주어 content 간의 거리를 조절가능하다.
+
+------------------------------------------------------------------------------------
+
+em 단위는 상위 요소 크기의 몇 배인지로 크기를 정합니다. 
+부모가 5px이면
+자식이 2em 이면 10px이되는것이다
+
+rem 단위는 문서의 최상위 요소, 즉 html 요소의 크기의 몇 배인지로 크기를 정합니다.
+HTML 기본 16px 
+5rem = 16*5= 80px
+
+------------------------------------------------------------------------------------------
+
+box-shadow : box에 그림자를 주는 효과이다
+
+box-shadow : none | h-shadow | v-shadow | blur | spread | color | inset
+
+/* h-shadow | v-shadow | color를 설정한 경우 */
+box-shadow: 10px 20px #ccc;
+
+/* h-shadow | v-shadow | blur | color를 설정한 경우 */
+box-shadow: 10px 20px 10px #ccc;
+
+/* h-shadow | v-shadow | blur | spread | color를 설정한 경우 */
+box-shadow: 10px 20px 10px 10px rgba(0, 0, 0, 0.2);
+
+/* inset | h-shadow | v-shadow | blur | spread | color를 설정한 경우 */
+box-shadow: inset 10px 20px 10px 10px rgba(0, 0, 0, 0.2);
+
+/* 두 가지 속성을 설정한 경우 */
+box-shadow: 10px 20px #ccc, 10px 10px red;
+
+속성(Property)
+none : 박스그림자를 적용하지 않습니다.
+h-shadow :  x축조절
+v-shadow :  y축조절
+blur : 그림자의 흐림정도를 나타낸다. (크면 클수록 흐려짐)
+spread : 그림자의 거리를 나타낸다. (양수 값은 그림자가 더 커지고 확산하며, 음수 값은 그림자가 줄어듭니다.)
+color: 그림자의 색을 나타낸다.
+inset : 그림자를 내부에 적용할수 있다.

@@ -1,21 +1,16 @@
 /* 레이아웃 */
-
 #header {
     background: url("../img/header_bg.jpg") repeat-x center top;
 }
 
-
 /* 컨테이너 */
-
 .container {
     width: 1200px;
     margin: 0 auto;
     background: rgba(0, 0, 0, 0.3);
 }
 
-
 /* 헤더 */
-
 .header {
     height: 327px;
 }
@@ -26,7 +21,7 @@
 
 .header .header_menu a {
     color: #fff;
-    padding: 8px 0px 6px 10px;
+    padding: 8px 0 6px 10px;
     display: inline-block;
     transition: color 0.3s ease;
     font-family: 'Abel', sans-serif;
@@ -38,32 +33,33 @@
 
 .header .header_tit {
     text-align: center;
-    margin-top: 55px;
     text-transform: uppercase;
+    margin-top: 55px;
     font-family: 'Abel', sans-serif;
 }
 
 .header .header_tit h1 {
+    font-size: 30px;
+    color: #fff;
+    background: #51b0dc;
     display: inline-block;
     padding: 5px 30px;
-    background: #51b0dc;
-    color: #fff;
-    font-size: 30px;
-    font-weight: 900;
     letter-spacing: 2px;
+    font-weight: 900;
     transition: box-shadow 0.25s ease-in-out;
 }
 
 .header .header_tit h1:hover {
-    box-shadow: -9em 0 0 0 #257fac inset,
+    box-shadow:
+        -9em 0 0 0 #257fac inset,
         9em 0 0 0 #257fac inset;
 }
 
 .header .header_tit a {
-    display: inline-block;
-    background: #4a9abf;
     font-size: 16px;
     color: #fff;
+    background: #4a9abf;
+    display: inline-block;
     padding: 10px 20px;
     margin-top: -7px;
     transition: box-shadow 0.25s ease-in-out;
@@ -75,6 +71,7 @@
         0 0 0 100px rgba(0, 0, 0, 0.1) inset;
 }
 
+
 /* 미디어쿼리 */
 
 @media only all and (max-width:1220px) {
@@ -83,6 +80,6 @@
     }
 
     .row {
-        padding: 0px 15px;
+        padding: 0 15px;
     }
 }
