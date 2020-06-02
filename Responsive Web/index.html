@@ -55,25 +55,25 @@
                     <div class="header_icon">
                         <ul>
                             <li>
-                                <a href="#">
+                                <a href="#" class="html5">
                                     <i class="fa fa-html5" aria-hidden="true"></i>
                                     <span>HTML5</span>
                                 </a>
                             </li>
                             <li>
-                                <a href="#">
+                                <a href="#" class="github">
                                     <i class="fa fa-github" aria-hidden="true"></i>
                                     <span>Github</span>
                                 </a>
                             </li>
                             <li>
-                                <a href="#">
+                                <a href="#" class="facebook">
                                     <i class="fa fa-facebook-square" aria-hidden="true"></i>
                                     <span>Facebook</span>
                                 </a>
                             </li>
                             <li>
-                                <a href="#">
+                                <a href="#" class="twitter">
                                     <i class="fa fa-twitter" aria-hidden="true"></i>
                                     <span>Twitter</span>
                                 </a>
@@ -138,6 +138,29 @@
     <!-- JavaScript Libraries -->
     <script src="js/jquery.min_1.12.4.js"></script>
     <script src="js/modernizr-custom.js"></script>
+    <!--아이콘 클릭했을때 스크립트 짜기-->
+    <script>
+        $('.html5').click(function (e) {
+            e.preventDefault();
+            window.open('https://developer.mozilla.org/ko/docs/Web/HTML/HTML5', 'HTML5',
+                'menubar=yes,toolbar=yes,resizable=yes,scrollbars=yes,height=300,width=600');
+        });
+        $('.github').click(function (e) {
+            e.preventDefault();
+            window.open('https://github.com/', 'github',
+                'menubar=yes,toolbar=yes,resizable=yes,scrollbars=yes,height=300,width=600');
+        });
+        $('.facebook').click(function (e) {
+            e.preventDefault();
+            window.open('https://ko-kr.facebook.com/', 'facebook',
+                'menubar=yes,toolbar=yes,resizable=yes,scrollbars=yes,height=300,width=600');
+        });
+        $('.twitter').click(function (e) {
+            e.preventDefault();
+            window.open('https://twitter.com/explore', 'twitter',
+                'menubar=yes,toolbar=yes,resizable=yes,scrollbars=yes,height=300,width=600');
+        });
+    </script>
 </body>
 
 </html>
