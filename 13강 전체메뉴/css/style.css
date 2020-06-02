@@ -140,7 +140,6 @@
 }
 
 /* 전체 메뉴 */
-
 .nav {
     overflow: hidden;
     padding: 25px 0;
@@ -155,28 +154,26 @@
     width: 20%;
 }
 
-.nav>div ol {
-    overflow: hidden;
-}
-
-.nav>div li {
-    float: left;
-    width: 50%;
-    position: relative;
-    padding-left: 8px;
-    box-sizing: border-box;
-}
-
-.nav>div.last li {
-    width: 100%;
-}
-
 .nav>div h3 {
     font-size: 18px;
     color: #25a2d0;
     font-weight: bold;
     margin-bottom: 4px;
 }
+
+.nav>div ol {
+    overflow: hidden;
+}
+
+
+.nav>div li {
+    position: relative;
+    float: left;
+    width: 50%;
+    padding-left: 8px;
+    box-sizing: border-box;
+}
+
 
 .nav>div li:before {
     content: '';
@@ -188,6 +185,12 @@
     left: 0;
     top: 8px;
 }
+
+.nav>div.last li {
+    width: 100%;
+}
+
+
 
 /* 미디어쿼리 */
 
