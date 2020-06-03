@@ -1,0 +1,13 @@
+text-decoration: underline으로 밑줄을 줄수도있다.
+
+CSS3로 밑줄을 주어보자
+
+1. 가상요소를 이용한다. (ex  :before or :after )
+2. 가상요소의 기준점을 (postion:relative로 잡아준다.)
+3. 가상요소에 transition속성을 넣어준다. (애니메이션과같은효과를 주기위해)
+4. 마지막으로 hover했을때 효과를 넣어준다.
+
+
+이4단계에 거쳐작업을 하면
+
+text-decoration과 같은 밑줄 효과를 넣어줄수가 있음
