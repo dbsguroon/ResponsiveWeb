@@ -1,0 +1,5 @@
+   transition: box-shadow 0.34s ease, background 0.34s ease;
+
+   트랜지션 효과를 콤마로 두번줄수가 있다.
+
+   
