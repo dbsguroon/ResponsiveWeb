@@ -1,0 +1,29 @@
+1. 일단 container로 중앙에 오게 만든다.
+
+2. 정렬을 한다.
+(이떄 width와 hegiht background 등으로 영역을 잡아놓는다)
+
+왼쪽 -float로
+오른쪽 -position으로
+
+3. 화면을 줄었을때 왼쪽과 오른쪽은 고정되어있고
+가운데 부분만 줄어든다. 
+즉 오른쪽과 왼쪽은 고정시켜주고 가운데만 %로 만든다.
+
+4. cont_left 와 cont_right 에 마진 top 값을 임시로 주어보면
+cont_center 영역이 left와 right 쪽에도 미치는 것을 알수있다.
+오른쪽은 cont_center 에서 margin-right로  cont_right의 width
+만큼 값을 준다. 왼쪽은 cont_center 에 overflow:hidden;을 주면된다.
+이렇게 하면 오른쪽과 왼쪽 영역을 cont_center가 침범하지 않는다.
+
+(정확한 원리는 잘모름 하지만 가운데 왼쪽 중앙의 영역을 정확히 잡기위해 써본것임)
+
+5. border를 넣기위해 임시로 잡은 height 값과 background를 제거해준다.
+
+6. 반응형을 작업해준다.
+반응형은 한영역 만들고 바로해주는게 좋음
+나중에는 원인찾기가 힘듬
+
+참고로 반응형할떄는 border 값도 가로 스크롤바의 원인이되기떄문에
+없애주어야함
+반응형일떄는 가로스크로바가 생기면안됨
