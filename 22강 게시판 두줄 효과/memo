@@ -1,0 +1,52 @@
+한줄 효과
+
+overflow:hidden; 
+text-overflow:ellipsis; 
+white-space:nowrap;
+
+
+두줄 효과 (아직 )
+
+overflow:hidden; 
+text-overflow:ellipsis;
+display: -webkit-box;
+-webkit-box-orient: vertical;
+-webkit-line-clamp: 2; 
+
+
+-ms-	-webkit-	-moz-	-webkit-	-o-
+벤더 프리픽스 : 벤더 프리픽스(vendor prefix)란 이러한 주요 웹 브라우저 공급자가 새로운 실험적인 기능을 제공할 때 이전 버전의 
+웹 브라우저에 그 사실을 알려주기 위해 사용하는 접두사(prefix)를 의미합니다.
+
+
+display:box;
+이 속성은 블록에 float 대신 사용할 수 있습니다. 
+또한 블록을 수직, 수평으로 배치하거나 역순으로 배열하거나 임의로 배치 순서를 바꿔줄 수도 있습니다.
+
+box-orient
+box-orient : vertical 은 박스를 수직방향으로 배치하고 box-orient : horizontal 은 박스를 수평방향으로 배치합니다.
+아무런 속성을 입력하지 않는다면 box-orient : horizontal이 기본 적용됩니다.
+
+line-clamp CSS 속성은 블록 컨테이너의 콘텐츠를 지정한 줄 수만큼으로 제한합니다.
+
+
+-----------------------------------------------------------------------
+
+익스플로러에서는 -webkit- 이 적용이 되지 않기 때문에 (IE 호환성을 쓴 코드)
+
+두줄효과를 쓰기위해서
+max-height:40px;
+overflow:hidden;
+
+최대높이를 40px만큼주고  그이상넘어가는것은 overflow:hidden; 으로 감추었다.
+
+
+-----------------------------------------------------------------------------
+
+
+
+
+
+
+
+
