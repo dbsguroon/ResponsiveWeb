@@ -448,6 +448,57 @@ body {
     .title .btn {
         display: none;
     }
+
+    .column.col1 {
+        padding: 0;
+        border-bottom: 0;
+    }
+
+    .column.col1 .col_tit {
+        display: none;
+    }
+
+    .column.col1 .col_desc {
+        display: none;
+    }
+
+    .column.col1 .menu li i {
+        display: none;
+    }
+
+    .column.col1 .menu ul {
+        overflow: hidden;
+    }
+
+    .menu li {
+        width: 33.3333%;
+        float: left;
+        text-align: center;
+        border-right: 1px solid #dbdbdb;
+        box-sizing: border-box;
+    }
+
+    .menu li:nth-child(3n) {
+        border-right: 0;
+    }
+
+    .menu li a {
+        color: #fff;
+        text-shadow: 0 0 5px rgba(0, 0, 0, 0.7);
+    }
+
+    .menu li a:hover {
+        box-shadow: none;
+        background: rgba(36, 130, 174, 0.3);
+    }
+
+    .column.col2 {
+        background: #fff;
+    }
+
+    .column.col4 {
+        border-top: 1px solid #dbdbdb;
+    }
 }
 
 /* 화면 너비 0~480px*/
