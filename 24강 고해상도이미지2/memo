@@ -1,0 +1,107 @@
+ 사이트 해상도에 따라서 어떤 이미지를 보여줄것인지 (총정리)
+
+ 3가지방법
+
+
+ 1번째 (호환성 좋음 모든브라우저에서 지원)
+
+ <figure>
+    <img src="img/blog1_@1.jpg" class="img-normal" alt = "normal-img">
+    <img src="img/blog1_@2.jpg" class="img-retina" alt = "retina-img>
+    <figcaption>반응형 웹 사이트 이미지 글입니다.</figcaption>
+ </figure>
+
+<!-- css -->
+
+.img{
+  width:100%;
+}
+
+.img-retina{
+  display:none;
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+only screen and (min-device-pixel-ratio: 1.5),
+only screen and (min-resolution: 1.5dppx) {
+ .img-retina {
+    display: initial;
+  }
+
+  .img-normal {
+    display: none;
+  }
+}
+
+2. 두번쨰 호환성은떨어짐 (srcset을 활용하는방법)
+
+
+ <figure>
+    <img src="img/blog1_@1.jpg" srcset="img/blog1_@1.jpg x1,img/blog1_@2.jpg x2" class="img-retina" alt = "img">
+    <figcaption>반응형 웹 사이트 이미지 글입니다.</figcaption>
+ </figure>
+
+
+3.  background를 활용한 방법을 많이씀
+
+<div class="retina-img">
+  <h5>image<h5>
+</div>
+<p>반응형 웹 사이트 이미지 글입니다.</p>
+
+
+<!-- css -->
+.retina-img{
+  background:url("../img/blog4_@1.jpg");
+  background-size:cover;
+}
+
+.retina-img h5{
+  color:#fff;
+  text-transform:uppercase;
+  text-align:center;
+  padding:30px 30px;
+}
+
+.retina-img p{
+  padding-top:5px;
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2),
+only screen and (min-device-pixel-ratio: 2),
+only screen and (min-resolution: 2dppx) {
+  .retina-img {
+    background: url(../img/blog4_@2.jpg);
+  }
+
+  @media only screen and (-webkit-min-device-pixel-ratio: 3),
+  only screen and (min-device-pixel-ratio: 3),
+  only screen and (min-resolution: 3dppx) {
+    .retina-img{
+      background: url(../img/blog4_@3.jpg);
+    }
+  }
+
+ pixel-ratio : 1  -> PC화면
+ pixel-ratio : 2   -> 맥의 레티나화면
+  pixel-ratio : 3   -> 모바일 환경
+
+
+------------------------------------------------------------------------
+
+background-size : contain 
+
+속성 값을 contain으로 지정하게되면, 
+배경 이미지의 가로/세로 길이 모두 요소 안에 들어온다라는 조건 하에 배경이미지를 크게 조정하게된다. 
+이때 가로/세로 비율도 유지된다.  결국, 배경이미지의 크기는 항상 요소의 크기보다 작거나 같다.
+
+background-size : cover
+
+속성 값을 cover로 지정하면 
+배경 이미지의 가로/세로 길이 모두 요소 보다 크다라는 조건하에 가능한한 배경이미지를 작게 조절한다. 
+이때 가로/세로 비율도 유지된다. 결국, 배경이미지의 크기는 항상 요소의 크기보다 크거나 같다.
+
+
+
+
+

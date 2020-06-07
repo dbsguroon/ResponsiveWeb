@@ -455,6 +455,39 @@ only screen and (min-resolution: 1.5dppx) {
     }
 }
 
+/*  블로그2 */
+.blog2 .img-retina {
+    background: url(../img/blog4_@1.jpg);
+    background-size: cover;
+}
+
+.blog2 h5 {
+    color: #fff;
+    text-transform: uppercase;
+    padding: 30px 30px;
+    text-align: center;
+}
+
+.blog2 p {
+    padding-top: 5px;
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio:2),
+only screen and (min-device-pixel-ratio: 2),
+only screen and (min-resolution: 2dppx) {
+    .blog2 .img-retina {
+        background: url(../img/blog4_@2.jpg);
+    }
+}
+
+
+@media only screen and (-webkit-min-device-pixel-ratio:3),
+only screen and (min-device-pixel-ratio: 3),
+only screen and (min-resolution: 3dppx) {
+    .blog2 .img-retina {
+        background: url(../img/blog4_@3.jpg);
+    }
+}
 
 
 /* 미디어쿼리 */
