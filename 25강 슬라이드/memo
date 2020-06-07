@@ -1,0 +1,17 @@
+    //이미지 슬라이더
+        $(".slider").slick({
+            dots: true,
+            autoplay: true,
+            autoplaySpeed: 3000,
+            arrows: false,
+            responsive: [{
+                breakpoint: 768,
+                settings: {
+                    arrows: true,
+                    dots: false
+                }
+            }]
+        });
+중간에 responsive 라고 있는데
+반응형일때 중단점이 768px 일때
+세팅으로 화살표를 나오게 하고 점을 없애는것임
