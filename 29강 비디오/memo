@@ -1,0 +1,42 @@
+<video autoplay="autoplay" controls="controls" loop="loop">
+    <source src="img/video.mp4" type="video/mp4">
+</video>
+
+autoplay : 자동재생
+controls : 동영상 컨트롤러
+loop : 반복
+source : 동영상 경로
+type : video 타입
+
+-------------------------------------------------
+
+유투브 영상 무료로 다운받기
+
+무료로 다운받고 싶은 동영상 경로에 ss만 추가해주면됨
+
+---------------------------------------------------
+
+유투브 공유영상으로 반응형 만들기
+
+1. 원하는 영상 공유누르고 퍼가기 누르면 소스가 나옴
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/mH0_XpSHkZo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+2. video 클래스를 만들고
+소스를 붙여넣고 width와 hegiht 값을 뺴준다.
+
+3. 영역을 잡아준다.
+
+.video {
+  width: 100%;
+  position: relative;
+  padding-bottom: 56.25%;
+}
+
+.video iframe {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+->여기서 height값이 안잡히게 되는데 상위 video 클래스에 패딩바텀값을 주어서 영역을 잡은것임
