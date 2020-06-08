@@ -88,7 +88,6 @@ button {
 }
 
 /* 반응형 이미지 */
-
 img {
     width: 100%;
 }
@@ -129,6 +128,7 @@ img {
 .mt50 {
     margin-top: 50px !important;
 }
+
 
 /* IR 효과 */
 /* 의미있는 이미지의 대체 텍스트를 제공하는 경우(Phark Method) */
