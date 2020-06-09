@@ -1,0 +1,51 @@
+    $(".title .btn").click(function (e) {
+            e.preventDefault();
+            $(".nav").slideToggle();
+            $(this).toggleClass("open");
+            if ($(this).hasClass("open")) {
+                $(this).find("i").attr("class", "fa fa-angle-up");
+            } else {
+                $(this).find("i").attr("class", "fa fa-angle-down");
+            }
+        });
+slideToggle() : 
+
+jQuery에서는 선택한 요소의 현재 표시 상태에 따라 다른 동작을 하는 .slideToggle() 메소드를 사용할 수 있다.
+선택한 요소가 현재 사라진 상태라면 .slideDown() 메소드의 동작을 수행하고, 나타나 있는 상태라면 .slideUp() 메소드의 동작을 수행한다.
+
+$(this).toggleClass("open");
+
+this는 .title .btn 에 open 클래스가 있으면 추가하고 없으면 제거한다.
+
+if ($(this).hasClass("open")) {
+    $(this).find("i").attr("class", "fa fa-angle-up");
+} else {
+    $(this).find("i").attr("class", "fa fa-angle-down");
+}
+
+.btn 클래스에 open 클래스를 가지고있다면
+.btn 에  i(폰트어썸)를 찾아서 class 속성을 fa fa-angle-up 으로바꾸고
+.btn 클래스에 open 클래스를 가지고있지않다면
+.btn 에  i(폰트어썸)를 찾아서 class 속성을 fa fa-angle-down 으로바꾸어라
+
+----------------------------------------------------------------------
+
+반응형에서 버튼을 클릭하게되면 전체메뉴가 나타나게되는데
+브라우저 창을 줄였을때 안없어지고 모바일까지 그대로 나타나는 현상이 생긴다.
+해결하는법
+
+$(window).resize(function () {
+    var width = $(window).width();
+    if (width > 600) {
+        $('.nav').removeAttr('style');
+    }
+});
+
+-> 웹브라우저의 크기를 resize 할떄 함수를 실행해라
+   변수로 width를 선언하고 값으로 브라우저의 width를 받는다.
+   그래서 조건문으로 만일 브라우저의 width 가 600보다 커지면
+   nav 클래스의 스타일속성을 모두제거해라라는뜻임
+
+<div class="nav" style="display:block">  -> <div class="nav"> 로 만들라는 뜻임
+
+

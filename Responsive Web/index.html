@@ -449,6 +449,24 @@
   <script src="js/slick.min.js"></script>
   <script src="js/lightgallery.min.js"></script>
   <script>
+    /* 접기 펼치기 */
+    $('.title .btn').click(function (e) {
+      e.preventDefault();
+      $('.nav').slideToggle();
+      $(this).toggleClass('open');
+      if ($(this).hasClass('open')) {
+        $(this).find('i').attr('class', 'fa fa-angle-up');
+      } else {
+        $(this).find('i').attr('class', 'fa fa-angle-down');
+      }
+    });
+
+    $(window).resize(function () {
+      var width = $(window).width();
+      if (width > 600) {
+        $('.nav').removeAttr('style');
+      }
+    });
     /*라이트 박스 */
     $(".lightbox").lightGallery({});
     /*슬라이더 */
