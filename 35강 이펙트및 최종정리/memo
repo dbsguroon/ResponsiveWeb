@@ -1,0 +1,64 @@
+동그라미 같은게 안으로 들어오고 배경이 살짝 검게 변하는 애니메이션
+
+1. 동그라미를 만들어주기 위해 HTML구조로 figcaption을 짠다.
+2. CSS를작성해준다.
+
+
+.side3 {
+    position:relative;
+    overflow:hidden; //원이오는걸 보여주지 않기위해서
+    background:#fff;
+}
+
+.side3 figcation{ //오른쪽에 숨겨놓았다가 가운데로 오게하는방식
+    position:absolute;
+    top:50%;
+    left:50%;
+    color:#fff;
+    text-transform:uppercase;
+    transition:all 0.3s ease;
+    transform:translate(350%,-50%) rotate(180deg); // 오른쪽으로 숨겨놓음
+    text-align:center;
+    opacity:0;
+}
+
+.side3 figcaption h3{
+    font-size:16px;
+
+}
+
+.side3 figcaption em{
+    display:block;
+    font-weight:bold;
+}
+
+.side3 img{
+    display:block;
+    transition:all 0.3s ease;
+}
+
+.side3:hover img{
+    opacity0.4;
+}
+
+.side3 figcaption:after{ //가상요소로 동그라미를 만들어줄것임
+    content:'';
+    width:100px;
+    height:100px;
+    background:#000;
+    border-radius:50%;
+    position:absolute;
+    left:50%;
+    top:50%;
+    z-index:-1; //동그라미가 글자뒤로가야되기떄문에 써줌
+    transform:translate(-50%,-50%);
+}
+
+.side3:hover figcaption{
+    transform:translate(-50%,-50%) rotate(0deg); // 180도에서 0도로 돌면서 오른쪽에서 가운데로 이동
+    opacity:1;
+}
+
+
+
+

@@ -827,6 +827,62 @@ only screen and (min-resolution: 3dppx) {
     z-index: 1;
 }
 
+/* 사이트 이펙트3 */
+
+.side3 {
+    position: relative;
+    overflow: hidden;
+    background: #000;
+}
+
+.side3 figcaption {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    color: #fff;
+    text-align: center;
+    opacity: 0;
+    text-transform: uppercase;
+    transform: translate(350%, -50%) rotate(180deg);
+    transition: all 0.3s ease;
+}
+
+.side3:hover figcaption {
+    transform: translate(-50%, -50%) rotate(0deg);
+    opacity: 1;
+}
+
+.side3 figcaption:after {
+    content: '';
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background: #000;
+    z-index: -1;
+    border-radius: 50%;
+}
+
+.side3 figcaption h3 {
+    font-size: 16px;
+}
+
+.side3 figcaption h3 em {
+    display: block;
+    font-weight: bold;
+}
+
+.side3 img {
+    display: block;
+    transition: all 0.3s ease;
+}
+
+.side3:hover img {
+    opacity: 0.4;
+}
+
 /* 미디어쿼리 */
 
 /* 화면 너비 0~1220px*/
