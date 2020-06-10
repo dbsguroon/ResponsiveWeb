@@ -1,0 +1,71 @@
+첫번쨰랑 똑같은데 글씨가 앞으로더나오게해서 3D 효과를 주는것 , translateZ만추가한거나다름없음
+
+1. 이미지가 2개가들어간다.
+2. front - 이미지1
+3. back - 이미지1 로 구조를짠다
+
+
+.side2{
+    position:relative;
+    display:block;
+    perspective:600px;
+}
+
+.side2 .front{
+    transform:-style:preserve-3d;
+    transform:rotateY(0deg);
+    transition:all 0.5s ease-in-out;
+    backface-visibility:hidden;
+}
+
+.side2 .back{
+    position:absolute;
+    left:0;
+    top:0;
+    width:100%;
+    height:100%;
+    z-index:-1;
+    transform:-style:preserve-3d;
+    transform:rotateY(-180deg);
+    transition:all 0.5s ease-in-out;
+    backface-visibility:hidden;
+}
+
+.side2 .front figcaption{ //글씨가 3D효과나게
+    position:absolute;
+    left:50%;
+    top:50%;
+    transform:translate(-50%,-50%) translateZ(100px);
+    display:block;
+    text-align:center;
+}
+
+.side2 .back figcaption{ //글씨가 3D효과나게
+    position:absolute;
+    left:50%;
+    top:50%;
+    transform:translate(-50%,-50%) translateZ(100px);
+    display:block;
+    text-align:center;
+}
+
+.side2 figcaption{
+    width:60%;
+    color:#fff;
+    font-size:20px;
+    font-family: "Abel", sans-serif;
+    font-weight:bold;
+    background:rgba(0,0,0,0.4);
+    padding:3px 10px;
+}
+
+.side2:hover .front{
+    transform:rotateY(180deg);
+}
+
+.side2:hover .back{
+    transform:rotateY(0deg);
+    z-index:1;
+}
+
+
