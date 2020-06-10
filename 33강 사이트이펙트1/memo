@@ -1,0 +1,64 @@
+카드 앞면 뒷면처럼 3D효과 주는방법
+
+1. 앞면 front 구조생성
+2. 뒷면 front 구조생성
+
+.side1{
+    position:relative;
+    perspective:600px; //원근점(3D효과를 주기떄문에 거리조절),쉽게 스크린에서 600px떨어졌다고생각
+    display:block;
+
+}
+
+.side1 .front{
+    transform-style:preserve-3d; // 3D효과를 주겠다.
+    transform:rotateY(0deg);
+    transition:all 0.5s ease-in-out;
+    backface-visibility:hidden; //3D효과를 쓰면 뒷면이 보이기 떄문에 안보이게 숨겨놈
+    }
+
+.side1 .back{
+    position: absolute; //카드뒷면의 위치를 잡아줌
+    top:0;
+    left:0;
+    width:100%;  //카드앞면의 넓이와 일치하게
+    height:100%;  //카드뒷면의 넓이와 일치하게
+    z-index:-1    // z-index(쌓임맥락) -1을주어서 뒤쪽으로 보냄
+    transform-style:preserve-3d;
+    color:#fff;
+    background:#4038dc;
+    transform:rotateY(-180deg);
+    transition:all 0.5s ease-in-out;
+    backface-visibility:hidden; 
+    }
+
+.side1 .back i{ 
+    position:absolute; // 폰트어썸하트의 위치조절
+    left:50%;   //부모의 width와 높이를 모를떄 중앙정렬하는 방법
+    top:50%;    //부모의 width와 높이를 모를떄 중앙정렬하는 방법
+    transform: translate(-50%, -50%); // 부모의 width와 높이를 모를떄 중앙정렬하는 방법
+    font-size:60px; //하트크기조절
+}
+
+.side1:hover .front{
+    transform:rotateY(180deg); // 마우스오버할떄 Y축기준으로 0도에서 180도로돌림
+    }
+
+.side1:back .back{
+    transform:rotateY(0deg); // 마우스오버할떄 Y축기준으로 -180도에서 0도로돌림
+    z-index:1; // z-index(쌓임맥락) 1을주우서 앞쪽으로 나오게함
+}
+
+
+
+부모의 width와 높이를 모를떄 중앙정렬하는 방법
+left:50%;  단순히 기준점에서 이동하는것임 
+top:50%;   단순히 기준점에서 이동하는것임 
+transform: translate(-50%, -50%); 이말은 계산된 width에서 x축으로 -50%만큼가라
+                                  이말은 계산된 height에서 y축으로 -50%만큼가라라는뜻임
+
+
+즉 left:50% ,top:50%로는 만으로는 부모에 중앙에 딱오질않음
+transform: translate(-50%, -50%); 으로 세밀하게 정가운데오게 조절한것임
+
+
